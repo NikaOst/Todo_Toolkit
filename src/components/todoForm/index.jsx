@@ -10,7 +10,7 @@ const TodoForm = () => {
     handleSubmit,
     reset,
     formState: { errors },
-  } = useForm({ mode: 'onSubmit' });
+  } = useForm({ mode: 'onSubmit', reValidateMode: 'onSubmit' });
 
   const handelAddTodo = (data) => {
     dispatch(addTodo(data.text));
@@ -25,7 +25,7 @@ const TodoForm = () => {
           type="text"
           placeholder="Enter new todo..."
         />
-        <input type="submit" value="Add Todo" />
+        <button>Add Todo</button>
       </div>
       {errors.text && <span>{errors.text.message}</span>}
     </form>

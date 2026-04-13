@@ -15,7 +15,10 @@ ul {
   display: flex;
   flex-direction: column;
   gap: 1rem;
-  width: 80%;
+  width: 90%;
+}
+h2 {
+  margin: 0 auto;
 }
 ul li {
   display: flex;
@@ -33,5 +36,5 @@ ul li {
   border-radius: 10px;
   color: rgb(17, 18, 18);
   width: 100%;
-  min-width: 75px;
+  min-width: 80px;
 }
