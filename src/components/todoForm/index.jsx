@@ -1,6 +1,7 @@
 import { useForm } from 'react-hook-form';
 import { addTodo } from '../../redux/slices/todosSlice';
 import { useDispatch } from 'react-redux';
+import styles from './styles.module.css';
 
 const TodoForm = () => {
   const dispatch = useDispatch();
@@ -20,13 +21,13 @@ const TodoForm = () => {
     <form onSubmit={handleSubmit(handelAddTodo)}>
       <div>
         <input
-          {...register('text', { required: 'Поле не должно быть пустым' })}
+          {...register('text', { required: 'Поле не должно быть пустым!' })}
           type="text"
           placeholder="Enter new todo..."
         />
-        {errors.text && <span>{errors.text.message}</span>}
+        <button type="submit">Add Todo</button>
       </div>
-      <button type="submit">Add Todo</button>
+      {errors.text && <span>{errors.text.message}</span>}
     </form>
   );
 };

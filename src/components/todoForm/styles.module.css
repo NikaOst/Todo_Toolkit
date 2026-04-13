@@ -1,0 +1,29 @@
+form div {
+  display: flex;
+  gap: 1rem;
+}
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 2rem;
+}
+
+form input {
+  padding: 20px;
+  width: 80vw;
+  font-size: 1rem;
+  border: none;
+  background-color: pink;
+  border-radius: 10px;
+  color: rgb(67, 70, 71);
+}
+
+form button {
+  padding: 10px;
+  width: 15vw;
+  border: none;
+  border-radius: 10px;
+  background-color: rgb(22, 21, 21);
+  color: aliceblue;
+}
