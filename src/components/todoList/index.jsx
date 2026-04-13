@@ -26,10 +26,10 @@ const TodoList = () => {
               <li key={todo.id}>
                 <TodoItem text={todo.text} completed={todo.completed} />
                 <div className={styles.btnContainer}>
-                  <button onClick={() => handelToggleTodo(todo.id)}>
+                  <button type="button" onClick={() => handelToggleTodo(todo.id)}>
                     {todo.completed ? 'Undo' : 'Complete'}
                   </button>
-                  <button onClick={() => handelDeleteTodo(todo.id)}>Delete</button>
+                  <button type="button" onClick={() => handelDeleteTodo(todo.id)}>Delete</button>
                 </div>
               </li>
             );
