@@ -1,16 +1,22 @@
-# React + Vite
+Задание 3
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Создать и настроить хранилище (store) для управления состоянием вашего приложения с использованием Redux Toolkit.
 
-Currently, two official plugins are available:
+1. Создайте файл store.js:
+   В папке redux вашего проекта создайте новый файл с именем `store.js`.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+2. Импортируйте функцию configureStore:
+   Откройте файл `store.js`.
+   Импортируйте функцию `configureStore` из библиотеки `@reduxjs/toolkit`.
 
-## React Compiler
+3. Импортируйте редьюсер задач:
+   Импортируйте редьюсер задач, который вы создали ранее, `todosReducer` из файла `todosSlice.js`.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+4. Создайте хранилище с использованием configureStore:
+   Вызовите функцию `configureStore` и передайте объект конфигурации.
 
-## Expanding the ESLint configuration
+- В объекте конфигурации укажите ключ `reducer`.
+- Внутри ключа `reducer` создайте объект, который будет содержать редьюсер вашего приложения.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+5. Экспортируйте созданное хранилище:
+   Экспортируйте хранилище, чтобы его можно было использовать в других частях приложения.
