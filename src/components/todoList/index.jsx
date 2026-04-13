@@ -20,19 +20,23 @@ const TodoList = () => {
     <div className={styles.todosContainer}>
       <h1>Todo List</h1>
       <ul style={{ listStyle: 'none' }}>
-        {todos.map((todo) => {
-          return (
-            <li key={todo.id}>
-              <TodoItem text={todo.text} completed={todo.completed} />
-              <div className={styles.btnContainer}>
-                <button onClick={() => handelToggleTodo(todo.id)}>
-                  {todo.completed ? 'Undo' : 'Complete'}
-                </button>
-                <button onClick={() => handelDeleteTodo(todo.id)}>Delete</button>
-              </div>
-            </li>
-          );
-        })}
+        {todos.length ? (
+          todos.map((todo) => {
+            return (
+              <li key={todo.id}>
+                <TodoItem text={todo.text} completed={todo.completed} />
+                <div className={styles.btnContainer}>
+                  <button onClick={() => handelToggleTodo(todo.id)}>
+                    {todo.completed ? 'Undo' : 'Complete'}
+                  </button>
+                  <button onClick={() => handelDeleteTodo(todo.id)}>Delete</button>
+                </div>
+              </li>
+            );
+          })
+        ) : (
+          <h2>Пока здесь пусто...</h2>
+        )}
       </ul>
     </div>
   );
