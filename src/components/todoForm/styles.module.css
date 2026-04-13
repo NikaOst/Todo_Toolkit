@@ -7,7 +7,7 @@
   flex-direction: column;
   gap: 10px;
   margin-bottom: 2rem;
-  width: 97%;
+  width: 98%;
 }
 
 .inputForm input {
@@ -20,9 +20,9 @@
   color: rgb(67, 70, 71);
 }
 
-.inputForm input[type='submit'] {
+.inputForm button {
   padding: 10px;
-  width: 15vw;
+  width: 15%;
   border: none;
   border-radius: 10px;
   background-color: rgb(22, 21, 21);
