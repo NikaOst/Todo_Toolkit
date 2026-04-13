@@ -18,14 +18,14 @@ const TodoForm = () => {
   };
 
   return (
-    <form onSubmit={handleSubmit(handelAddTodo)}>
+    <form className={styles.inputForm} onSubmit={handleSubmit(handelAddTodo)}>
       <div>
         <input
           {...register('text', { required: 'Поле не должно быть пустым!' })}
           type="text"
           placeholder="Enter new todo..."
         />
-        <button type="submit">Add Todo</button>
+        <input type="submit" value="Add Todo" />
       </div>
       {errors.text && <span>{errors.text.message}</span>}
     </form>

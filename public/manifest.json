@@ -1,0 +1,11 @@
+{
+  "manifest_version": 3,
+  "name": "Todo Toolkit",
+  "version": "1.0",
+  "description": "A simple React + Redux todo list extension",
+  "action": {
+    "default_popup": "index.html",
+    "default_title": "Todo Toolkit"
+  },
+  "permissions": []
+}

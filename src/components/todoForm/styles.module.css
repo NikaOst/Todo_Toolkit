@@ -1,17 +1,18 @@
-form div {
+.inputForm div {
   display: flex;
   gap: 1rem;
 }
-form {
+.inputForm {
   display: flex;
   flex-direction: column;
   gap: 10px;
   margin-bottom: 2rem;
+  width: 97%;
 }
 
-form input {
+.inputForm input {
   padding: 20px;
-  width: 80vw;
+  width: 100%;
   font-size: 1rem;
   border: none;
   background-color: pink;
@@ -19,7 +20,7 @@ form input {
   color: rgb(67, 70, 71);
 }
 
-form button {
+.inputForm input[type='submit'] {
   padding: 10px;
   width: 15vw;
   border: none;
